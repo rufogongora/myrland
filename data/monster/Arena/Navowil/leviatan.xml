@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Leviatan" nameDescription="a leviatan" race="blood" experience="27500" speed="450" manacost="0">
+  <health now="26500" max="26500"/>
+  <look type="275" corpse="7349"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="90"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+<attacks>
+    <attack name="melee" interval="2000" skill="120" attack="90"/>
+<attack name="poison" interval="2000" chance="50" range="7" radius="6" target="0" min="-60" max="-1250">
+  <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+    <attack name="ice" interval="1000" chance="30" range="7" length="8" min="-220" max="-430">
+      <attribute key="shootEffect" value="ice"/>
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+</attacks>
+  <defenses armor="20" defense="22">
+    <defense name="healing" interval="1000" chance="50" min="100" max="250">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+	<element earthPercent="50"/>
+	<element firePercent="100"/>
+	<element icePercent="100"/>
+	<element deathPercent="60"/>
+	<element energyPercent="50"/>
+	<element holyPercent="30"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+<loot>
+    <item id="7888" chance="500"/> -- glacier amulet
+</loot>
+</monster>

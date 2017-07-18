@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Myrland Protector" nameDescription="see it" race="blood" experience="3000" speed="1000" manacost="0">
+  <health now="6000" max="6000"/>
+  <look type="133" head="39" body="0" legs="19" feet="20" addons="3" corpse="3058"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="0"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="150" attack="150"/>
+    <attack name="energy" interval="1000" chance="20" range="7" min="-120" max="-200">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+	<attack name="fire" interval="1000" chance="15" range="7" min="-150" max="-200">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+  </attacks>
+  <defenses armor="20" defense="20">
+    <defense name="healing" interval="1000" chance="13" min="150" max="200">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+	<defense name="speed" interval="1000" chance="10" speedchange="200" duration="2000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+	<element deathPercent="-10"/>
+	<element firePercent="10"/>
+	<element earthPercent="20"/>
+	<element energyPercent="20"/>
+	<element icePercent="10"/>
+	<element holyPercent="20"/>
+  </elements>
+  <immunities>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Feel the power of my runes!"/>
+    <voice sentence="Killing you is getting expensive"/>
+    <voice sentence="My secrets are mine alone!"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="60" chance1="100000" chancemax="0"/> -- gold coin
+	<item id="7620" chance="3200"/> -- mana potion
+	<item id="1987" chance="100000"> -- bag
+		<inside>
+			<item id="6576" chance="50000"/> -- fireworks rocket
+			<item id="2492" chance="30000"/> -- dragon scale mail :: Arm 15
+			<item id="2514" chance="30000"/> -- mastermind shield :: Def 37
+			<item id="2260" chance="20000"/> -- blank rune
+			<item id="7762" chance="600"/> -- enchanted small amethyst
+		</inside>
+    </item>
+  </loot>
+</monster>

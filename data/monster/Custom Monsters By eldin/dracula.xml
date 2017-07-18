@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Dracula" nameDescription="the immortal" race="UNDEAD" experience="30000" speed="1000" manacost="0">
+	<health now="500000" max="500000"/>
+	<look type="68" head="20" body="30" legs="40" feet="50" corpse="6006"/>
+	<targetchange interval="1000" chance="100"/>
+	<strategy attack="70" defense="30"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="120" attack="149"/>
+		<attack name="lifedrain" interval="1000" chance="20" range="7" min="-400" max="-500"/>
+		<attack name="manadrain" interval="1000" chance="13" range="7" min="-500" max="-900"/>
+		<attack name="manadrain" interval="1000" chance="6" radius="5" target="0" min="-150" max="-1350">
+		</attack>
+	<attack name="poison" interval="1900" chance="25" length="4" spread="15" min="-200" max="-550">
+	<attribute key="areaEffect" value="STONES"/>
+	</attack>
+      <attack name="physical" interval="1000" chance="13" radius="8" target="0" min="-400" max="-900">
+      <attribute key="areaEffect" value="mortarea"/>
+	</attack>
+    <attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-200" max="-600">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+
+    <attack name="poison" interval="2000" chance="20" length="8" spread="10" min="-300" max="-800">
+      <attribute key="areaEffect" value="BIGPLANTS"/>
+    </attack>
+	</attacks>
+	<defenses armor="27" defense="38">
+		<defense name="outfit" interval="1000" chance="4" monster="mutated bat" duration="6000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="17" min="300" max="4000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="1000" chance="5" speedchange="1901" duration="10000">
+			<attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="0"/>
+		<immunity fire="0"/>
+		<immunity poison="0"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+		<immunity death="1"/>
+	</immunities>
+  <elements>
+	<element earthPercent="80"/>
+	<element holyPercent="-90"/>
+	<element firePercent="20"/>
+	<element energyPercent="20"/>
+	<element physicalPercent="-30"/>
+	<element icePercent="20"/>
+  </elements>
+	<summons maxSummons="10">
+		<summon name="vampire" interval="1000" chance="50" max="10"/>
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="BLOOD!" yell="1"/>
+		<voice sentence="YOUR TIME HAS COME VAN HELSING."/>
+		<voice sentence="I SMELL WARM BLOOD"/>
+		<voice sentence="I CALL YOU, MY VAMPIRE!"/>
+	</voices>
+	<loot capacity="1000">
+		<item id="2144" countmax="80" chance="50000"/> -- black pearl
+		<item id="2032" countmax="1" chance="11000"/> -- bowl
+		<item id="2172" countmax="1" chance="10000"/> -- bronze amulet
+		<item id="2127" countmax="1" chance="10000"/> -- emerald bangle
+		<item id="2160" countmax="42" chance="100000"/> -- crystal coin
+		<item id="2534" countmax="1" chance="100000"/> -- vampire shield :: Def 34
+		<item id="5942" countmax="1" chance="100000"/> -- blessed wooden stake
+		<item id="9777" countmax="1" chance="1000000"/> -- yalaharian legs piece
+ 		<item id="1987" chance="100000"> -- bag
+		<inside>
+		<item id="2229" countmax="53" chance="10000"/> -- skull
+		<item id="6433" countmax="1" chance="100000"/> -- necromancer shield
+		<item id="2747" countmax="1" chance="100000"/> -- grave flower
+		</inside>
+	</item>
+	</loot>
+</monster>

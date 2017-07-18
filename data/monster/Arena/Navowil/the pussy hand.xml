@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="the pussy hand" nameDescription="a pussy hand" race="blood" experience="27550" speed="250" manacost="0">
+  <health now="10500" max="10500"/>
+  <look type="230" corpse="7349"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="70"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-400" max="-900"/>
+
+    <attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-850" duration="60000">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="effect" interval="1000" chance="12" radius="3" target="0">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="34" range="7" radius="7" target="1" min="-100" max="-700">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-600">
+      <attribute key="areaEffect" value="energyarea"/>
+    </attack>
+    <attack name="physical" interval="1000" chance="7" length="8" spread="3" min="-300" max="-500"/>
+    <attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-400" max="-600">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-600" max="-650">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-150" max="-350">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="125" defense="90">
+    <defense name="speed" interval="3000" chance="12" speedchange="380" duration="8000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+    <defense name="invisible" interval="4000" chance="50" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+    <defense name="healing" interval="2000" chance="50" min="100" max="250">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="35" speedchange="370" duration="30000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+	<element earthPercent="60"/>
+	<element firePercent="70"/>
+	<element icePercent="40"/>
+	<element deathPercent="70"/>
+	<element energyPercent="40"/>
+	<element holyPercent="30"/>
+  </elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+
+  </voices>
+  <loot>
+   </loot>
+
+</monster>

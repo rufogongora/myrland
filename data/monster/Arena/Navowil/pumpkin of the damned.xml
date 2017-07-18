@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pumpkin of the damned" nameDescription="a pumpkin of the damned" race="blood" experience="280" speed="270" manacost="0">
+  <health now="23000" max="23000"/>
+  <look type="292" head="20" body="30" legs="40" feet="50" corpse="7349"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="4"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="135" attack="85"/>
+    <attack name="energy" interval="1000" chance="8" range="7" min="-145" max="-475">
+      <attribute key="shootEffect" value="energy"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="7" range="7" min="-160" max="-380">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="physical" interval="1000" chance="9" range="7" min="-270" max="-390">
+      <attribute key="shootEffect" value="suddendeath"/>
+      <attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="poison" interval="1000" chance="8" range="7" min="-130" max="-470">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="6" range="7" min="-275" max="-385">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="6" range="7" min="-275" max="-285">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="6" range="7" min="-120" max="-340">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="speed" interval="1000" chance="10" range="7" speedchange="-600" duration="20000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+  </attacks>
+  <defenses armor="80" defense="40"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <elements>
+	<element earthPercent="80"/>
+	<element firePercent="60"/>
+	<element icePercent="60"/>
+	<element deathPercent="70"/>
+	<element energyPercent="60"/>
+	<element holyPercent="50"/>
+  </elements>
+  <summons maxSummons="4">
+    <summon name="banshee" interval="1000" chance="13" max="4"/>
+    <summon name="dragon" interval="1000" chance="12" max="2"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Let me take a look at you!"/>
+    <voice sentence="Inferior creatures, bow before my power!"/>
+  </voices>
+  <loot>
+  </loot>
+</monster>

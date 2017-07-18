@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="hydra scout" nameDescription="a giant hydra" race="blood" experience="5000" speed="240" manacost="0">
+  <health now="5000" max="5000"/>
+  <look type="121" head="20" body="30" legs="40" feet="50" corpse="6048"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="150" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="300"/>
+  </flags>
+  <attacks>
+
+    <attack name="melee" interval="2000" skill="150" attack="150"/>
+    <attack name="ice" interval="3000" chance="18" length="7" spread="4" min="-150" max="-210">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+    <attack name="earth" interval="1000" chance="16" length="7" spread="3" min="-190" max="-250">
+      <attribute key="areaEffect" value="smallplants"/>
+    </attack>
+
+    <attack name="ice" interval="2000" chance="16" range="6" target="1" min="-85" max="-120">
+	<attribute key="shootEffect" value="poison"/>
+    </attack>
+
+  </attacks>
+  <defenses armor="30" defense="30">
+    <defense name="healing" interval="2000" chance="30" min="300" max="480">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+<elements>
+		<element physicalPercent="-15"/>
+		<element firePercent="-5"/>
+		<element energyPercent="-15"/>
+</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="trrrrrrr"/>
+    <voice sentence="hazme un mundo de caramelo"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0"/> -- gold coin
+    <item id="2148" countmax="25" chance1="100000" chancemax="0"/> -- gold coin
+    <item id="2498" chance="2000"/> -- royal helmet :: Arm 9
+    <item id="2195" chance="2000"/> -- boots of haste
+    <item id="2475" chance="2200"/> -- warrior helmet :: Arm 8
+    <item id="3976" countmax="10" chance1="100000" chancemax="0"/> -- worm
+    <item id="1987" chance="100000"> -- bag
+      <inside>
+        <item id="2214" chance="1200"/> -- ring of healing
+		<item id="2671" countmax="3" chance="65000"/> -- ham
+        <item id="2666" countmax="4" chance="90000"/> -- meat
+	    <item id="2146" countmax="2" chance="5000"/> -- small sapphire
+        <item id="2177" chance="1800"/> -- life crystal
+        <item id="2476" chance="1000"/> -- knight armor :: Arm 12
+        <item id="4850" chance="1200"/> -- hydra egg
+        <item id="2149" countmax="3" chance1="4000" chancemax="0"/> -- small emerald
+        <item id="2536" chance="1500"/> -- medusa shield :: Def 33
+        <item id="2168" chance="2500"/> -- life ring
+        <item id="2197" chance="1500"/> -- stone skin amulet
+      </inside>
+    </item>
+  </loot>
+</monster>

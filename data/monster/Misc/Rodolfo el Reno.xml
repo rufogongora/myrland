@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rodolfo el Reno" nameDescription="a Rodolfo el Reno" race="blood" experience="0" speed="500" manacost="260">
+<health now="200" max="200"/>
+<look type="31" head="20" body="30" legs="40" feet="50" corpse="5970"/>
+<targetchange interval="2000" chance="20"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="0"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="0"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="25"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="10" attack="2"/>
+</attacks>
+<defenses armor="30" defense="30"/>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="0"/>
+<immunity fire="0"/>
+<immunity poison="0"/>
+<immunity lifedrain="0"/>
+<immunity paralyze="0"/>
+<immunity outfit="0"/>
+<immunity drunk="0"/>
+<immunity invisible="0"/>
+</immunities>
+<voices interval="5000" chance="10">
+<voice sentence="Santa Ponte a dieta."/>
+<voice sentence="Berrr..."/>
+<voice sentence="Feliz Navidad."/>
+<voice sentence="Es dificl bolar alrededor del mundo."/>
+</voices>
+<loot>
+<item id="6512" countmax="1" chance1="50000" chancemax="0"/> -- santa doll
+<item id="6501" countmax="4" chance1="100000" chancemax="0"/> -- gingerbread man
+<item id="6569" countmax="15" chance1="100000" chancemax="0"/> -- candy
+<item id="2688" countmax="15" chance1="100000" chancemax="0"/> -- candy cane
+<item id="6394" countmax="1" chance1="100000" chancemax="0"/> -- cream cake
+</loot>
+</monster>

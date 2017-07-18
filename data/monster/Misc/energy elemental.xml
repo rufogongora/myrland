@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Energy elemental" nameDescription="an energy elemental" race="blood" experience="500" speed="224" manacost="450">
+  <health now="1825" max="1825"/>
+  <look type="293" corpse="1495"/>
+  <targetchange interval="2000" chance="5"/>
+  <strategy attack="70" defense="20"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-0" max="-70"/>
+    <attack name="energy" interval="2000" chance="25" range="7" radius="4" target="1" min="-168" max="-200">
+      <attribute key="shootEffect" value="ENERGY"/>
+      <attribute key="areaEffect" value="ENERGY"/>
+    </attack>
+    <attack name="energy" interval="1590" chance="50" length="8" spread="5" min="-100" max="-130">
+      <attribute key="areaEffect" value="ENERGY"/>
+    </attack>
+  </attacks>
+  <defenses armor="17" defense="40">
+    <defense name="speed" interval="1000" chance="9" speedchange="1201" duration="3000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Noob!"/>
+  </voices>
+  <loot capacity="500">
+    <item id="2404" countmax="1" chance="4000"/>
+    <item id="2148" countmax="100" chance="80000"/>
+    <item id="2148" countmax="100" chance="15000"/>
+    <item id="8777" countmax="1" chance="2500"/>
+    <item id="8827" countmax="1" chance="2500"/>
+  </loot>
+</monster>

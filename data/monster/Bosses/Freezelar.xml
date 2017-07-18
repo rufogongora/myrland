@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Freezelar" nameDescription="Freezelar" race="UNDEAD" experience="250000" speed="300" manacost="0">
+  <health now="600000" max="600000"/>
+  <look type="12" head="0" body="124" legs="124" feet="124" corpse="6068"/>
+  <targetchange interval="10000" chance="20"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="98"/>
+    <flag targetdistance="1"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-180" max="-750"/>
+
+    <attack name="ice" interval="2000" chance="25" range="7" radius="6" target="1" min="-200" max="-400">
+      <attribute key="shootEffect" value="ice"/>
+      <attribute key="areaEffect" value="GIANTICE"/>
+    </attack>
+
+<attack name="ice" interval="3000" chance="20" length="7" spread="4" min="-200" max="-460">
+      <attribute key="areaEffect" value="ICEATTACK"/>
+    </attack>
+
+<attack name="ice" interval="2000" chance="19" range="7" radius="6" target="0" min="-100" max="-500">
+  <attribute key="areaEffect" value="ICEAREA"/>
+</attack>
+
+    <attack name="speed" interval="8000" chance="25" range="7" radius="2" target="1" speedchange="-600" duration="50000">
+      <attribute key="areaEffect" value="ICETORNADO"/>
+    </attack>
+
+  </attacks>
+
+  <defenses armor="55" defense="65">
+    <defense name="healing" interval="1000" chance="90" min="300" max="500">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+
+    <defense name="speed" interval="5000" chance="80" speedchange="400" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity ice="1"/>
+    <immunity holy="0"/>
+    <immunity death="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="15">
+    <summon name="ice golem" interval="4000" chance="50"/>
+    <summon name="ice witch" interval="4000" chance="50"/>
+    <summon name="crystal spider" interval="4000" chance="50"/>
+    <summon name="frost dragon" interval="4000" chance="50"/>
+  </summons>
+  <voices interval="5000" chance="30">
+    <voice sentence="I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!" yell="1"/>
+    <voice sentence="MY SEED IS FEAR AND MY HARVEST ARE YOUR SOULS!" yell="1"/>
+    <voice sentence="THE TRIANGLE OF TERROR WILL RISE!" yell="1"/>
+    <voice sentence="ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!" yell="1"/>
+  </voices>
+<loot>
+<item id="2148" chance="100000" countmax="100" /> -- gold coin
+<item id="2148" chance="50000" countmax="90" /> -- gold coin
+<item id="2143" chance="10000" countmax="5" /> -- white pearl
+<item id="6528" chance="3429" /> -- avenger :: Def 38 :: Atk 50
+<item id="2396" chance="19429" /> -- ice rapier :: Atk 60 :: Def 1
+<item id="2462" chance="20000" /> -- devil helmet :: Arm 7
+<item id="2214" chance="16000" /> -- ring of healing
+<item id="2003" chance="100000" > -- grey backpack
+<inside>
+	<item id="2495" chance="6000" /> -- demon legs :: Arm 9
+	<item id="2387" chance="20000" /> -- double axe :: Def 12 :: Atk 35
+	<item id="2393" chance="60000" /> -- giant sword :: Def 22 :: Atk 46
+	<item id="2195" chance="16033" /> -- boots of haste
+	<item id="2421" chance="7000" /> -- thunder hammer :: Def 35 :: Atk 49
+	<item id="2522" chance="14000" /> -- great shield :: Def 38
+	<item id="2523" chance="13000" /> -- blessed shield :: Def 40
+	<item id="7431" chance="93000" /> -- demonbone :: Def 38 :: Atk 48
+	<item id="2192" chance="24000" /> -- crystal ball
+</inside>
+</item>
+</loot>
+</monster>

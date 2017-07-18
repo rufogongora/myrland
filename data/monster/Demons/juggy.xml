@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Juggy" nameDescription="a Juggy" race="blood" experience="8700" speed="380" manacost="0">
+  <health now="8200" max="8200"/>
+  <look type="244" corpse="6336"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="90" attack="110"/>
+    <attack name="physical" interval="2000" chance="18" range="7" min="0" max="-350">
+      <attribute key="shootEffect" value="largerock"/>
+    </attack>
+  </attacks>
+  <defenses armor="70" defense="70">
+    <defense name="speed" interval="2000" chance="12" speedchange="480" duration="4000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element physicalPercent="50"/>
+		<element earthPercent="30"/>
+		<element firePercent="30"/>
+		<element icePercent="20"/>
+		<element holyPercent="-15"/>
+		<element energyPercent="-10"/>
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="WAHHHH!"/>
+    <voice sentence="RAAARRR!"/>
+    <voice sentence="GRRRRRR!"/>
+  </voices>
+  <loot>
+	<item id="2148" chance="100000" countmax="100" /> -- gold coin
+	<item id="2152" chance="80000" countmax="5" /> -- platinum coin
+	<item id="2666" chance="20000" countmax="8" /> -- meat
+	<item id="2672" chance1="36000" countmax="3" /> -- dragon ham
+	<item id="2220" chance="80000" /> -- dirty fur
+	<item id="2228" chance="5000" /> -- broken pottery
+	<item id="2136" chance="985"/> -- demonbone amulet
+	<item id="2452" chance="650" /> -- heavy mace :: Def 15 :: Atk 49
+	<item id="6558" chance="15500" /> -- concentrated demonic blood
+	<item id="6558" chance="15500" /> -- concentrated demonic blood
+	<item id="6500" chance="6000" countmax="1" /> Demonic Essence -- demonic essence
+	<item id="1987" chance="100000" > -- bag
+		<inside>
+			<item id="2514" chance="1300"/> -- mastermind shield :: Def 37
+			<item id="7590" chance="6900"/> -- great mana potion
+			<item id="7591" chance="5400"/> -- great health potion
+			<item id="7452" chance="3900"/> -- spiked squelcher :: Def 21 :: Atk 41
+			<item id="7404" chance="1900"/> -- assassin dagger :: Def 12 :: Atk 40
+			<item id="5944" chance="7300" countmax="1" /> Soul Orb -- soul orb
+			<item id="2434" chance="5000" /> -- dragon hammer :: Def 20 :: Atk 32
+			<item id="2466" chance="1777" /> -- golden armor :: Arm 14
+			<item id="2470" chance="1500" /> -- golden legs :: Arm 9
+			<item id="8889" chance="999"/> -- skullcracker armor :: Arm 14
+		</inside>
+	</item>
+ </loot>
+</monster>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="The miranox Necromancer" nameDescription="miranox necromancer" race="VENOM" experience="30000" speed="320" manacost="0">
+  <health now="40000" max="40000"/>
+  <look type="287" head="20" body="30" legs="40" feet="50" corpse="7349"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag staticattack="90"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-500" max="-1250"/>
+    <attack name="manadrain" interval="2000" chance="20" range="7" min="-300" max="-900">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="poison" interval="3000" chance="20" radius="6" target="0" min="-250" max="-600">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="energy" interval="2000" chance="18" radius="6" target="0" min="-200" max="-800">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+    <attack name="manadrain" interval="2000" chance="16" radius="6" target="0" min="-225" max="-875">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-200" max="-550">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <attack name="effect" interval="3000" chance="20" radius="5" target="0" min="-200" max="-800">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="firecondition" interval="3000" chance="20" range="7" radius="7" target="1" min="-200" max="-900">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-684">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+
+  </attacks>
+  <defenses armor="80" defense="80">
+    <defense name="healing" interval="2000" chance="10" min="300" max="800">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense name="speed" interval="3000" chance="30" speedchange="360" duration="7000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="invisible" interval="4000" chance="20" duration="5000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<elements>
+		<element energyPercent="20"/>
+		<element earthPercent="20"/>
+		<element icePercent="20"/>
+		<element holyPercent="20"/>
+		<element deathPercent="20"/>
+		<element firePercent="20"/>
+	</elements>
+  <summons maxSummons="4">
+    <summon name="dragon" interval="3000" chance="50" max="1"/>
+    <summon name="dragon lord" interval="3000" chance="50" max="1"/>
+    <summon name="sea serpent" interval="3000" chance="50" max="1"/>
+    <summon name="frost dragon" interval="3000" chance="50" max="1"/>
+  </summons>
+  <voices interval="5000" chance="20">
+    <voice sentence="im the king of the dragons!" yell="1"/>
+  </voices>
+<loot>
+</loot>
+</monster>
